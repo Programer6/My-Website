@@ -1,56 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script src="script.js"></script>
-    <title>My Projects</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <title>My Projects</title>
 </head>
 <body>
-    <header>
-        <img src="https://via.placeholder.com/150" alt="Delroy's Logo">
-        <nav>
-            <ul>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <img src="https://via.placeholder.com/150" alt="Delroy's Logo" />
+    <nav>
+      <ul>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section class="projects-page">
-            <h1>My Projects</h1>
+  <main>
+    <section class="projects-page">
+      <h1>My Projects</h1>
+      <div id="loading-spinner">Loading projects...</div>
+    </section>
+  </main>
 
-            <div class="project-card" id="finger-gun">
-                <h2>Finger-Gun Shooter Game</h2>
-                <p>A camera-based hand gesture game made with Python & Pygame.</p>
-                <a href="https://github.com/Programer6/finger-gun-game" target="_blank">View on GitHub</a>
-            </div>
+  <footer>
+    <p>&copy; 2025 Delroy Crasto</p>
+    <a href="mailto:your.email@example.com">Email Me</a>
+    <a href="https://github.com/Programer6" target="_blank" rel="noopener noreferrer">
+      <img src="github-icon.png" alt="GitHub" style="width:24px; height:24px;" />
+    </a>
+  </footer>
 
-            <div class="project-card" id="dragon-pcb">
-                <h2>Dragon PCB Button</h2>
-                <p>A dragon-shaped PCB with LED & button designed for Hack Club Solder.</p>
-                <a href="https://github.com/Programer6/dragon-pcb" target="_blank">View on GitHub</a>
-            </div>
+  <script>
+    const repoContainer = document.querySelector('.projects-page');
+    const loadingSpinner = document.getElementById('loading-spinner');
 
-            <div class="project-card" id="weather-dash">
-                <h2>Weather Dashboard</h2>
-                <p>A DIY Weather Dashboard using a TFT display and custom PCB case.</p>
-                <a href="https://github.com/Programer6/weather-dashboard" target="_blank">View on GitHub</a>
-            </div>
+    fetch('https://api.github.com/users/Programer6/repos')
+      .then((response) => response.json())
+      .then((repos) => {
+        loadingSpinner.style.display = 'none';
 
-        </section>
-    </main>
+        repos.forEach((repo) => {
+          if (repo.description) {
+            const repoCard = document.createElement('div');
+            repoCard.className = 'project-card';
 
-    <footer>
-        <p>&copy; 2025 Delroy Crasto</p>
-        <a href="mailto:your.email@example.com">Email Me</a>
-        <a href="https://github.com/Programer6" target="_blank" rel="noopener noreferrer">
-            <img src="github-icon.png" alt="GitHub" style="width:24px; height:24px;">
-        </a>
-    </footer>
+            repoCard.innerHTML = `
+              <h2>${repo.name}</h2>
+              <p>${repo.description}</p>
+              <a href="${repo.html_url}" target="_blank">View on GitHub</a>
+            `;
+
+            repoContainer.appendChild(repoCard);
+          }
+        });
+      })
+      .catch((error) => {
+        loadingSpinner.textContent = 'Failed to load projects. Try again later.';
+        console.error('Failed to fetch repos:', error);
+      });
+  </script>
 </body>
 </html>
