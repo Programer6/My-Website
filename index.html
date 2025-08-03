@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="shortcut icon" href="Delroy_favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <title>Delroy's Personal Website</title>
 </head>
 <body>
   <header>
-    <img src="Final_Delroy_logo.png" alt="Delroy's Logo" />
     <nav>
+      <img src="Final_Delroy_logo.png" alt="Delroy's Logo" />
       <ul>
         <li><a href="index.html">About Me</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -22,34 +22,42 @@
 
   <main>
     <section class="intro">
-      <img src="https://via.placeholder.com/300" alt="Delroy's Photo (not trying to leak my image atm)" />
+      <img src="https://via.placeholder.com/300" alt="Delroy's Photo (not trying to leek my image atm)" />
       <h1>Welcome to Delroy's Personal Website</h1>
       <p>Hi! I’m Delroy, a high school student who loves tech, coding, and building creative projects like working with hardware, PCBs, 3D printing and more.</p>
       <a href="projects.html">See My Projects</a>
     </section>
 
-    <section class="project-preview">
+    <div class="projects">
       <div class="project-box">
-        <h2>Finger-Gun Shooter Game</h2>
-        <p>A camera-based hand gesture game made with Python & Pygame.</p>
-        <a href="projects.html#finger-gun"><button>View More</button></a>
+        <h2>Wireless 75% Keyboard</h2>
+        <p>74-keys, Wireless Bluetooth connectivity via a nice!nano microcontroller while powered by LiPo battery.</p>
+        <img src="https://private-user-images.githubusercontent.com/109965350/472973572-14a59bc5-2d58-4ae4-bf00-e3eb32af4cba.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTQyMTQ1ODYsIm5iZiI6MTc1NDIxNDI4NiwicGF0aCI6Ii8xMDk5NjUzNTAvNDcyOTczNTcyLTE0YTU5YmM1LTJkNTgtNGFlNC1iZjAwLWUzZWIzMmFmNGNiYS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgwM1QwOTQ0NDZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jMzBiOTkzODM4Yjc1NjI5ZjJkOWEzNTQ4YzBkZDJhMjc0YmNjNzY0MzZmZmRlNzFiYWRjYzBlYWEwNmYzMDMwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.tHcGFffawbvQKCnpg8ztPd6otGN1TUAL4p9UelWVKQU" alt="keyboard img">
+        <a href="https://github.com/Programer6/Custom-75-Keyboard"><button>View More</button></a>
       </div>
       <div class="project-box">
-        <h2>Dragon PCB Button</h2>
-        <p>A dragon-shaped PCB with LED & button designed for Hack Club Solder.</p>
-        <a href="projects.html#dragon-pcb"><button>View More</button></a>
+        <h2>Delta-Forge</h2>
+        <p>Delta Forge is a compact, high-performance delta style 3D printer inspired by the design of the delta flyer.
+        </p>
+        <img src="https://private-user-images.githubusercontent.com/109965350/467859085-5689b632-0528-40cd-9ccb-254fd474ca9c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTQyMTQ2MTQsIm5iZiI6MTc1NDIxNDMxNCwicGF0aCI6Ii8xMDk5NjUzNTAvNDY3ODU5MDg1LTU2ODliNjMyLTA1MjgtNDBjZC05Y2NiLTI1NGZkNDc0Y2E5Yy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgwM1QwOTQ1MTRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04OWVkZDQ1MDJmYzA5NDdjMGNmY2I4ZTBhZjBlNjBkNDg0OWU3ZmQ4YWM0Y2NmNzhiYjA4MzU2ZjhmMjNkODg2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.BKs0Gh4hG8I7RIRhBeBZvqPDuQBnkS0HB9HW6Ifzq6Y" alt="Delta forge img">
+        <a href="https://github.com/Programer6/Delta-Forge"><button>View More</button></a>
       </div>
       <div class="project-box">
-        <h2>Weather Dashboard</h2>
-        <p>A DIY Weather Dashboard using a TFT display and custom PCB case.</p>
-        <a href="projects.html#weather-dash"><button>View More</button></a>
+        <h2>Waffle</h2>
+        <p>A Website with HTML, CSS and a little spread of JavaScript</p>
+        <img src="https://github.com/user-attachments/assets/edb3aad6-15c1-4577-a2a7-8d2d4771c2d8" alt="website img">
+        <a href="https://github.com/Programer6/waffle"><button>View More</button></a>
       </div>
-    </section>
+      <br><br>
+      <center>
+      <button type="button" style="margin-bottom: 20px;">View More of my Projects!</button>
+    </center>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2025 Delroy Crasto</p>
-    <a href="mailto:your.email@example.com">Email Me</a>
+    <a href="mailto:contact.codelife@gmail.com">Email Me</a>
     <a href="https://github.com/Programer6" target="_blank" rel="noopener noreferrer">
       <img src="github-icon.png" alt="GitHub" style="width:24px; height:24px;" />
     </a>
