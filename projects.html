@@ -4,13 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="shortcut icon" href="Delroy_favicon.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <title>My Projects</title>
 </head>
 <body>
   <header>
-    <img src="Final_Delroy_logo.png" alt="Logo" />
     <nav>
+      <img src="Final_Delroy_logo.png" alt="Delroy's Logo" />
       <ul>
         <li><a href="index.html">About Me</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -20,49 +21,40 @@
   </header>
 
   <main>
-    <section class="projects-page">
       <h1>My Projects</h1>
-        <p>Here are some of the projects I've worked on. Check them out on Github!</p>
-      <div id="loading-spinner">Loading projects...</div>
-    </section>
+      <p>Here are some of the projects I've worked on. Check them out on Github!</p>
+      <div class="projects">
+        <div class="project-box">
+          <h2>Wireless 75% Keyboard</h2>
+          <p>74-keys, Wireless Bluetooth connectivity via a nice!nano microcontroller while powered by LiPo battery.</p>
+          <img src="" alt="">
+          <a href="projects.html"><button>View More</button></a>
+        </div>
+        <div class="project-box">
+          <h2>Delta-Forge</h2>
+          <p>Delta Forge is a compact, high-performance delta style 3D printer inspired by the design of the delta flyer.
+          </p>
+          <img src="" alt="">
+          <a href="projects.html"><button>View More</button></a>
+        </div>
+        <div class="project-box">
+          <h2>Waffle</h2>
+          <p>A Website with HTML, CSS and a little spread of JavaScript</p>
+          <img src="" alt="">
+          <a href="projects.html"><button>View More</button></a>
+        </div>
+        <div class="project-box">
+          <p>More to come soon!</p>
+        </div>
   </main>
 
   <footer>
     <p>&copy; 2025 Delroy Crasto</p>
-    <a href="mailto:your.email@example.com">Email Me</a>
+    <a href="mailto:contact.codelife@gmail.com">Email Me</a>
     <a href="https://github.com/Programer6" target="_blank" rel="noopener noreferrer">
-      <img src="github-icon.png" alt="GitHub" style="width:24px; height:24px;" />
+    <img src="github-icon.png" alt="GitHub" style="width:24px; height:24px;" />
     </a>
   </footer>
 
-  <script>
-    const repoContainer = document.querySelector('.projects-page');
-    const loadingSpinner = document.getElementById('loading-spinner');
-
-    fetch('https://api.github.com/users/Programer6/repos')
-      .then((response) => response.json())
-      .then((repos) => {
-        loadingSpinner.style.display = 'none';
-
-        repos.forEach((repo) => {
-          if (repo.description) {
-            const repoCard = document.createElement('div');
-            repoCard.className = 'project-card';
-
-            repoCard.innerHTML = `
-              <h2>${repo.name}</h2>
-              <p>${repo.description}</p>
-              <a href="${repo.html_url}" target="_blank">View on GitHub</a>
-            `;
-
-            repoContainer.appendChild(repoCard);
-          }
-        });
-      })
-      .catch((error) => {
-        loadingSpinner.textContent = 'Failed to load projects. Try again later.';
-        console.error('Failed to fetch repos:', error);
-      });
-  </script>
 </body>
 </html>
