@@ -157,6 +157,10 @@ footer {
   flex-wrap: wrap;
 }
 
+a {
+  color: green;
+  text-decoration: none;
+
 footer img {
   width: 50px;
   padding-top: 15px;
