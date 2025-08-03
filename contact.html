@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="Delroy_favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Contact Delroy</title>
 </head>
 <body>
     <header>
-        <img src="Final_Delroy_logo.png" alt="Delroy's Logo">
         <nav>
+            <img src="Final_Delroy_logo.png" alt="Delroy's Logo" />
             <ul>
                 <li><a href="index.html">About Me</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -23,14 +24,25 @@
         <section class="contact-section">
             <h1>Contact Me</h1>
             <p>Feel free to reach out for collaborations, questions, or just to say hi!</p>
-            <p>Email: <a href="mailto:your.email@example.com">contact.codelife@gmail.com</a></p>
+            <p>Email: <a href="mailt:contact.codelife@example.com">contact.codelife@example.com</a></p>
             <p>GitHub: <a href="https://github.com/Programer6" target="_blank">Programer6</a></p>
         </section>
+        <section class="contact-form">
+            <h2>Send Me a Message</h2>
+            <form action="https://formspree.io/f/your-form-id" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="_replyto" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit" class="submit">Send Message</button>
+            </form>
     </main>
 
     <footer>
         <p>&copy; 2025 Delroy Crasto</p>
-        <a href="mailto:your.email@example.com">Email Me</a>
+        <a href="mailto:contact.codelife@gmail-com">Email Me</a>
         <a href="https://github.com/Programer6" target="_blank" rel="noopener noreferrer">
             <img src="github-icon.png" alt="GitHub" style="width:24px; height:24px;">
         </a>
